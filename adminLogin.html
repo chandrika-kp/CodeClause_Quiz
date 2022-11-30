@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+
+</head>
+
+<body class="main_body">
+  <h6>Admin Login Page</h6>
+
+  <div id="adminLogin">
+
+    <div>
+      <label class="lbLogin">Username : &nbsp;</label>
+      <input type="text" id="username">
+      <br>
+      <label class="lbLogin">Password : &nbsp;</label>
+      <input type="text" id="password">
+      <br>
+      <button class="btnLogin" onclick="loginButton()">LogIn</button>
+    </div>
+  </div>
+
+  <div id="mainPanel" style="display: none;">
+    <div class="main_body2">
+
+      <form action="" id="myForm">
+
+        Q) <input type="text" id="quesn" placeholder="Enter question"><br>
+        1) <input type="text" name="" id="option1" placeholder=""><br>
+        2) <input type="text" name="" id="option2" placeholder=""><br>
+        3) <input type="text" name="" id="option3" placeholder=""><br>
+        4) <input type="text" name="" id="option4" placeholder=""><br>
+        &nbsp;
+        <hr>
+        <div id="divID"></div>
+        <p id="o1"></p>
+        <p id="o2"></p>
+        <p id="o3"></p>
+        <p id="o4"></p>
+
+      </form>
+
+      <input type="submit" id="idea" onClick="ques()" />
+      <input type="button" value="Reset data" onClick="fun()" />
+      <p></p>
+
+
+      <hr>
+      <p>Q) What does HTML stand for</p>
+      <p>1) Hyper Text Markup Language</p>
+      <p>2) Home Tool Markup Language</p>
+      <p>3) Hyperlinks and Text Markup Language</p>
+      <p>4) Home and Text Makeup Language</p>
+      <hr>
+      <p>Q) What is the correct sequence of HTML tags for starting a webpage?</p>
+      <p>1) Head, Title, HTML</p>
+      <p>2) HTML, Head, Title</p>
+      <p>3) Title, Head, HTML</p>
+      <p>4) All of these</p>
+      <hr>
+      <p>Q) How can you make a list that lists the items with bullets?</p>
+      <p>1) List</p>
+      <p>2) DT</p>
+      <p>3) OL</p>
+      <p>4) UL</p>
+
+    </div>
+
+
+
+  </div>
+
+  <script>
+
+    function ques() {
+      var input = document.getElementById('quesn')
+      var ques_details = document.getElementById('divID');
+      ques_details.innerHTML = ques_details.innerHTML + "Q)" + input.value;
+
+      var option1 = document.getElementById('option1')
+      var option_details = document.getElementById('o1');
+      option_details.innerHTML = option_details.innerHTML + "1)" + option1.value;
+
+      var option2 = document.getElementById('option2')
+      var option_details = document.getElementById('o2');
+      option_details.innerHTML = option_details.innerHTML + "2)" + option2.value;
+
+      var option3 = document.getElementById('option3')
+      var option_details = document.getElementById('o3');
+      option_details.innerHTML = option_details.innerHTML + "3)" + option3.value;
+
+      var option4 = document.getElementById('option4')
+      var option_details = document.getElementById('o4');
+      option_details.innerHTML = option_details.innerHTML + "4)" + option4.value;
+
+    }
+
+
+
+    function fun() {
+      document.getElementById("myForm").reset();
+    }   
+  </script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 50px;
+            display: none;
+            place-items: center;
+            color: white;
+            background-color: black;
+            font-size: 30px;
+            margin: 20px;
+
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Q1) What does HTML stand for
+        <hr>
+        <input type="radio" name="question1" id="correct1"> Hyper Text Markup Language<br>
+        <input type="radio" name="question1">
+        Home Tool Markup Language<br>
+        <input type="radio" name="question1"> Hyperlinks and Text Markup Language<br>
+        <input type="radio" name="question1"> Home and Text Makeup Language<br>
+        <button class="next" onclick="next(1)">NEXT</button>
+    </div>
+
+    <div class="container">
+        Q2) What is the correct sequence of HTML tags for starting a webpage?
+        <hr>
+        <input type="radio" name="question2">Head, Title, HTML<br>
+        <input type="radio" name="question2" id="correct2">HTML, Head, Title<br>
+        <input type="radio" name="question2">Title, Head, HTML<br>
+        <input type="radio" name="question2">All of these<br>
+        <button class="next" onclick="next(2)">NEXT</button>
+    </div>
+
+    <div class="container">
+        Q3) How can you make a list that lists the items with bullets?
+        <hr>
+        <input type="radio" name="question3">List<br>
+        <input type="radio" name="question3">DT<br>
+        <input type="radio" name="question3">OL<br>
+        <input type="radio" name="question3" id="correct3">UL<br>
+        <button onclick="result()" >SUBMIT QUIZ</button>
+        <br>
+        <div id="hide">
+            <button onclick="result1()">
+                <p id="result" onchange="result1()">Check Score</p>
+            </button>
+            <br>
+            <button ><a href="./ques.html">Reattempt</a></button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

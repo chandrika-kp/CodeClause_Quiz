@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction() {
+      var input = document.getElementById('fname')
+      var std_details = document.getElementById('divID');
+      std_details.innerHTML = "Hello '" + std_details.innerHTML + input.value + "' welcome to online quiz exam";
+    }
+  </script>
+</head>
+
+<body class="body2">
+  <h1>Student Login page</h1>
+
+  <div class="main_body2">
+
+    <form action="">
+      Enter your name:
+      <input type="text" id="fname" placeholder="Enter your name" onchange="myFunction()" required><br>
+      Password:
+      <input type="password" name="" id="pwd" placeholder="enter same as the above" required><br>
+      <a class="btn2" href="http://127.0.0.1:5501/ques.html">Start Quiz</a>
+
+
+    </form>
+
+  </div>
+  <div class="main_body3">
+    <div id="divID">
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>
